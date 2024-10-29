@@ -1,0 +1,41 @@
+{
+  "requestsFinished": 12,
+  "requestsFailed": 0,
+  "requestsRetries": 2,
+  "requestsFailedPerMinute": 0,
+  "requestsFinishedPerMinute": 6,
+  "requestMinDurationMillis": 5632,
+  "requestMaxDurationMillis": 16397,
+  "requestTotalFailedDurationMillis": 0,
+  "requestTotalFinishedDurationMillis": 107484,
+  "crawlerStartedAt": "2024-10-29T14:34:45.583Z",
+  "crawlerFinishedAt": "2024-10-29T14:36:38.063Z",
+  "statsPersistedAt": "2024-10-29T14:36:38.063Z",
+  "crawlerRuntimeMillis": 113474,
+  "crawlerLastStartTimestamp": 1730212484589,
+  "requestRetryHistogram": [
+    10,
+    2
+  ],
+  "statsId": 0,
+  "requestAvgFailedDurationMillis": null,
+  "requestAvgFinishedDurationMillis": 8957,
+  "requestTotalDurationMillis": 107484,
+  "requestsTotal": 12,
+  "requestsWithStatusCode": {
+    "200": 12,
+    "403": 4
+  },
+  "errors": {},
+  "retryErrors": {
+    "C:\\Users\\Moon Computers\\Desktop\\trademarkia\\node_modules\\@crawlee\\src\\internals\\basic-crawler.ts:1093:19": {
+      "missing error code": {
+        "Error": {
+          "Request blocked - received 403 status code.": {
+            "count": 4
+          }
+        }
+      }
+    }
+  }
+}

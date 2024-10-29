@@ -1,0 +1,9 @@
+{
+	"id": "ZoNttukF9vzWCge",
+	"json": "{\"id\":\"ZoNttukF9vzWCge\",\"url\":\"https://www.trademarkia.com/category/chemical-products/page-r\",\"loadedUrl\":\"https://www.trademarkia.com/category/chemical-products/page-r\",\"uniqueKey\":\"https://www.trademarkia.com/category/chemical-products/page-r\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":1,\"errorMessages\":[\"Error: Request blocked - received 403 status code.\\n    at PlaywrightCrawler._throwOnBlockedRequest (C:\\\\Users\\\\Moon Computers\\\\Desktop\\\\trademarkia\\\\node_modules\\\\@crawlee\\\\src\\\\internals\\\\basic-crawler.ts:1093:19)\\n    at PlaywrightCrawler._responseHandler (C:\\\\Users\\\\Moon Computers\\\\Desktop\\\\trademarkia\\\\node_modules\\\\@crawlee\\\\src\\\\internals\\\\browser-crawler.ts:721:22)\\n    at PlaywrightCrawler._runRequestHandler (C:\\\\Users\\\\Moon Computers\\\\Desktop\\\\trademarkia\\\\node_modules\\\\@crawlee\\\\src\\\\internals\\\\browser-crawler.ts:552:24)\\n    at async PlaywrightCrawler._runRequestHandler (C:\\\\Users\\\\Moon Computers\\\\Desktop\\\\trademarkia\\\\node_modules\\\\@crawlee\\\\src\\\\internals\\\\playwright-crawler.ts:243:9)\\n    at async wrap (C:\\\\Users\\\\Moon Computers\\\\Desktop\\\\trademarkia\\\\node_modules\\\\@apify\\\\src\\\\index.ts:77:27)\"],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2024-10-29T14:36:29.127Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 1,
+	"uniqueKey": "https://www.trademarkia.com/category/chemical-products/page-r",
+	"url": "https://www.trademarkia.com/category/chemical-products/page-r"
+}
