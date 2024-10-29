@@ -51,13 +51,15 @@ export class MyService {
               })
               .map(anchor => anchor.href);
           });
+
+          for (const link of hrefs) {
+            await this.extractDataFromLink(page, link);
+          }
+
     
-          console.log('Extracted hrefs:', hrefs);
-
-          
-
+          // console.log('Extracted text:', textContent);
+          // console.log('formatted data: ',await this.extractValues(textContent))
  
-         console.log(hrefs);
 
         } catch (error) {
           console.error(`Failed to navigate to ${request.url}. Error: ${error.message}`);
@@ -73,7 +75,7 @@ export class MyService {
    
 
     console.log('Total links:', urls.length);
-    await crawler.run(['https://www.trademarkia.com/category/chemical-products']);
+    await crawler.run(['https://www.trademarkia.com/avectas-98141953']);
     return{'message': 'success'}
   }
  
@@ -88,4 +90,44 @@ export class MyService {
       }
     });
   }
+
+  async extractValues(data:any) {
+    const pattern = /Last Applicant\/ Owned by(.*?)Serial Number(.*?)Registration Number(.*?)Correspondent Address(.*?)Filing Basis(.*?)Disclaimer(.*)/s;
+  
+    const match = data.match(pattern);
+  
+    if (match) {
+      return {
+        lastApplicant: match[1].trim(),
+        serialNumber: match[2].trim(),
+        registrationNumber: match[3].trim(),
+        correspondentAddress: match[4].trim(),
+        filingBasis: match[5].trim(),
+        disclaimer: match[6].trim(),
+      };
+    } else {
+      throw new Error('Data format is incorrect or labels not found');
+    }
+  }
+
+  async extractDataFromLink(page:any, url: string) {
+    try {
+      await page.goto(url, { waitUntil: 'networkidle' });
+      const textContent = await page.$eval(
+        'div.flex.flex-col.space-y-8.mt-8.ml-8',
+        (div) => div.textContent.trim() // Get the text content of the div and trim whitespace
+      );
+      
+      const extractedValues = this.extractValues(textContent);
+
+      console.log('Extracted values from', url, extractedValues);
+    } catch (error) {
+      console.error(`Failed to navigate to ${url}. Error: ${error.message}`);
+    }
+  }
 }
+
+
+ 
+ 
+ 
